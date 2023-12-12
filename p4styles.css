@@ -1,0 +1,430 @@
+/********f************
+    
+    Project 4 Website Development & Deployment
+    Name: Marc Lawrence Bocalan
+    Date: December 13, 2023
+    Description: Project 4 Website Development & Deployment
+
+*********************/
+
+html,
+body,
+section,
+p,
+header,
+nav,
+footer,
+div,
+article,
+aside,
+ol,
+ul,
+li,
+h1,
+h6 {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div#container {
+	width: 810px;
+	background-color: #fff;
+	border-radius: 8px;
+	margin: 10px auto;
+	padding: 10px;
+	box-shadow: 1px 1px 2px #a2a2a2, -1px -1px 2px #a2a2a2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+	background-color: #e6e6e6;
+    background-image: url('images/background.jpg');
+}
+
+.headingrow{
+	display: flex;
+}
+
+	#headingrow-1{
+		flex: 1;
+		position: static;
+	}
+
+    #headingrow-2{
+		display: flex;
+		flex: 2;
+		font-size: 7px;
+		justify-content: flex-end;
+		align-items:self-end;
+	}
+
+        fieldset{
+            border-style: none;
+        }
+        
+        #headingrow-2 ul{
+            display:flex;
+            align-items:center;
+            list-style: none;
+            margin-right: -12px;
+        }
+
+        /* search bar */
+        #headingrow-2 fieldset input[type="text"]{
+            list-style-type: none;
+            margin: 0 0 1px 0;
+            padding: 4px 0 0 0;
+            border: solid 1px #9C9C9C;
+        }
+
+        /* search button */
+        #headingrow-2 fieldset input[type="submit"]{
+            list-style-type: none;
+            margin: 5px;
+            padding: 3px 7px 3px 7px;
+            font-size: 10px;
+            color: black; /* Text color */
+            border: solid 1px #9C9C9C; /* Remove borders */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+
+    #mainheader img{
+        width: 100%;
+        height:200px;
+        margin-top: -50px;
+    }
+
+    #mainheader h1{
+        position: relative;
+        bottom: -20px;
+        Left: 26px;
+        z-index: 100;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 38px;
+        font-weight: 100;
+        letter-spacing: 4px;
+    }
+
+    /* Style the main navigation */
+    #mainheader ul {
+        display: flex;
+        background: linear-gradient(to bottom, #f4f6f7 0%, #0d0d0d 100%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px; /* Set font size to 10px */
+        list-style: none;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Set text color to white for the entire list */
+        font-weight: 550;
+        margin-top: -5px;
+    }
+    
+    
+    /* Style the first divider with color #01527A */
+    #mainheader ul li:not(:first-child)::before {
+        content: ""; /* Empty content to create a visual divider */
+        border-right: 1px solid #BCDDFF; /* Divider color */
+        height: 13px; /* Adjust the height of the divider */
+    }
+    
+    /* Style the second divider with color #BCDDFF */
+    #mainheader ul li::after {
+        content: ""; /* Empty content to create a visual divider */
+        border-right: 1px solid #01527A; /* Divider color */
+        height: 13px; /* Adjust the height of the divider */
+    }
+    
+    /* Remove the divider from the last list-2 item */
+    #mainheader ul li:last-child::after {
+        content: none;
+    }
+
+    #mainheader ul li:first-child::before {
+        content: none;
+    }
+
+    /* Style the text color of links within list-2 */
+    #mainheader ul li a {
+        color: white;
+        margin: 0 10px; 
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    #mainheader ul li a:hover, #mainheader ul li a:focus{
+        color:#0570f3;
+        transform: scale(1.1);
+        outline: none;
+        transition: 0.3s;
+    }
+
+#maincontent{
+    display: flex;    
+    justify-content: space-evenly;
+    padding: 30px 30px 30px 30px;
+
+}
+    #maincontent1{
+        line-height: 30px;
+        font-size: 20px;
+    }
+        #maincontent1 ul{
+            padding-top: 30px;
+            margin-left: 70px;
+        }
+
+    #maincontent2{
+        border: solid 1px;
+        border-radius: 5px;
+        margin-top: 30px;
+        padding-top: 30px;
+        line-height: 30px;
+    }
+
+    #maincontent2 ul{
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    article{
+        font-size: 13px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+	footer{
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 11px;
+		line-height: 15px;
+	}
+
+		footer ul{
+			display: flex;
+			justify-content: center;
+			list-style: none;
+		}
+
+			/* Style the divider between list items */
+			footer ul li:not(:last-child)::after {
+				content: ""; /* Empty content to create a visual divider */
+				margin: 0 5px; /* Adjust spacing on either side of the divider */
+				border-right: 1px solid black; /* Divider style */
+				height: 13px; /* Adjust the height of the divider */
+				display: inline-block; /* Make the divider an inline block to center it */
+				vertical-align: middle; /* Align the divider vertically in the middle */
+			}
+			
+			/* Style the text within list items */
+			footer ul li a {
+				margin: 0 3px;
+				vertical-align: middle; /* Align the text vertically in the middle */
+			}
+			
+			/* Remove the divider from the last list item */
+			footer ul li:last-child::after {
+				content: none;
+			}
+
+			/* Mouse hover effect */
+			footer ul li a:hover, .headingrow-2 li a:focus{
+				color:black;
+				text-decoration: underline;
+				outline: none;
+			}
+		
+		#footer-2{
+			display: flex;
+			justify-content: center;
+			color: black;
+		}
+
+		#footer-3{
+			color: #1d1d1d;
+		}
+
+/*Products and Services*/
+.products{
+    display: flex;
+
+}
+
+    .products article{
+        flex:2;
+        line-height: 20px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .products img{
+        flex: 1;
+        max-width: 30%;
+        height: 30%;
+    }
+
+/*Contact Us*/
+#mainContactus ul{
+    margin-left: 50px;
+}
+#contactus{
+    display: flex;
+}
+    #contactus legend{
+        font-weight: 700;
+    }
+    #contactus div{
+        flex:2;
+        margin-bottom: 70px;
+        padding: 30px;
+
+    }
+        #contactus ul{
+            list-style: none;
+        }
+
+        #comments{
+            width: 100%; /* Set the width to 100% or adjust as needed */
+            height: 150px; /* Adjust the height as needed */
+            resize: vertical; /* Allow vertical resizing */
+            box-sizing: border-box;
+        }
+
+    #contactus img{
+        flex:1;
+        max-width: 30%;
+        height: 30%;
+        margin-top: 30px;
+        margin-left:20px;
+    }
+
+    /* Error Styles */
+
+.error {
+	color: red;
+    font-size: 12px;
+}
+
+
+/* Submit Button */
+
+#submit{
+    margin-left: 63px;
+}
+
+#reset{
+    margin-left: 15px;
+}
+#submit:hover{
+    cursor:pointer;
+}
+
+#reset:hover{
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    div#container {
+        width: auto;
+        background-color: #fff;
+        border-radius: 8px;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: 1px 1px 2px #a2a2a2, -1px -1px 2px #a2a2a2;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #mainheader ul {
+        display:list-item;
+		flex-wrap: wrap;
+        font-size: 12px; /* Set font size to 10px */
+        list-style: none;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        color: white; /* Set text color to white for the entire list */
+        font-weight: 550;
+        margin-top: -5px;
+
+    }
+
+    #mainheader ul li{
+        border-right: none;
+        line-height: 30px;
+        background: linear-gradient(to bottom, #f4f6f7 0%, #0d0d0d 100%);
+    }
+
+        /* Style the first divider with color #01527A */
+        #mainheader ul li:not(:first-child)::before {
+            content: ""; /* Empty content to create a visual divider */
+            border-right: none;; /* Divider color */
+        }
+        
+        /* Style the second divider with color #BCDDFF */
+        #mainheader ul li::after {
+            content: ""; /* Empty content to create a visual divider */
+            border-right: none;
+        }
+        
+        /* Remove the divider from the last list-2 item */
+        #mainheader ul li:last-child::after {
+            content: none;
+        }
+    
+        #mainheader ul li:first-child::before {
+            content: none;
+        }
+
+        #mainheader ul li:hover, #mainheader ul li a:focus{
+            color:#0570f3;
+            transform: scale(1.05);
+            outline: none;
+            transition: 0.3s;
+        }
+    
+        #maincontent{ 
+            display: list-item;
+            justify-content: space-evenly;
+            padding: 30px 30px 30px 30px;
+        }
+
+        #maincontent1{
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        #maincontent2{
+            font-size: 15px;
+        }
+
+        #validateForm li{
+            display: list-item;
+    
+        }
+
+        .products{
+            display: flex;
+        
+        }
+        
+            .products article{
+                margin-top: -5px;
+                margin-bottom: 10px;
+                line-height: 20px;
+                position: relative;
+            }
+        
+            .products img{
+                float: right;
+                max-width: 30%;
+                height: 30%;
+            }
+
+    #contactus{
+        font-size: 15px;
+    }
+}
